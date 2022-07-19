@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+JavaScript Snake
+By Patrick Gillespie
+http://patorjk.com/games/snake
+Source code is available here: https://github.com/patorjk/JavaScript-Snake
+-->
+    <meta charset="utf-8">
+    <title>JavaScript Snake</title>
+    <link rel=stylesheet id="style" type="text/css" href="./css/head-snake.css" />
+    <link rel="shortcut icon" href="css/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      .snake-toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index:10000;
+        padding: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="snake-toolbar">
+      <a href="leaderboard" class='snake-link'>Leaderboard</a> |
+
+      <input id="username" name="name" placeholder="Name" />
+    </div>
+    <div id="game-area" tabindex="0">
+    </div>
+    <script type="text/javascript" src="./js/snake.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    <script>
+      name = document.getElementById("username").value;
+      if (name == "") {
+        name = "Player" + Math.floor(Math.random() * 100);
+        document.getElementById("username").value = name;
+      }
+    </script>
+
+</body>
+</html>
