@@ -10,7 +10,7 @@ http://patorjk.com/games/snake
 */
 
 var SNAKE = SNAKE || {};
-var API_HOST = "http://localhost:3000";
+var API_HOST = "/api/";
 window.SNAKE = SNAKE; // this will allow us to access the game in other JS files when the app is loaded up in a codesandbox.com sandbox, that's the only reason it's here
 
 /**

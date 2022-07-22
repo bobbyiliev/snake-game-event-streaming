@@ -26,7 +26,7 @@ const kafka = new Kafka({
 })
 
 // Post Endpoint to accept the data: username, score and id
-app.post('/', async (req, res) => {
+app.post('/api', async (req, res) => {
   const { username, score, id, count } = req.body;
   let topic = "game-score";
   if (count) {
