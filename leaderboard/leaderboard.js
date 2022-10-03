@@ -32,7 +32,7 @@ wss.on('connection', async ws => {
   // Get the total score of all players
   await client.query('SET CLUSTER=devex');
   await client.query('BEGIN');
-  await client.query('DECLARE game_score_c CURSOR FOR TAIL game_score_m WITH (SNAPSHOT = false)');
+  await client.query('DECLARE game_score_c CURSOR FOR SUBSCRIBE game_score_m WITH (SNAPSHOT = false)');
 
   while (true) {
     const res = await client.query('FETCH ALL game_score_c');
