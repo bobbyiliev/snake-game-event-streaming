@@ -1,6 +1,10 @@
 # Gaming Event Streaming Application - Snake
 
-> Note: Still in progress...
+>[!WARNING]   
+> Starting September 11, 2024, Upstash Kafka has been transitioned into deprecation period, which will last for 6 months. It will eventually be discontinued on March 11, 2025.
+> The demo will still work but not without some changes to the way the events are sent to the Kafka cluster.
+
+> https://upstash.com/docs/kafka/overall/getstarted
 
 This demo utilizes the good old Snake game to demonstrate how to stream events from a game to a Kafka cluster and then run real-time analytics on the events using Materialize.ß
 
